@@ -1,0 +1,32 @@
+[project]
+name = "papercheck"
+version = "0.1.0"
+description = "程序化论文打假流水线：图片查重/篡改 + 统计异常 + 图表自洽 + 文本/元数据 + 跨论文比对，配 LLM 判官"
+requires-python = ">=3.12"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "jerrydu" }]
+keywords = ["research-integrity", "image-forensics", "fraud-detection", "scientific-misconduct", "pdf"]
+dependencies = [
+    "pymupdf",
+    "pillow",
+    "imagehash",
+    "opencv-python-headless",
+    "numpy",
+    "scipy",
+    "pdfplumber",
+    "jinja2",
+]
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Intended Audience :: Science/Research",
+]
+
+[project.scripts]
+papercheck = "papercheck.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["papercheck*"]

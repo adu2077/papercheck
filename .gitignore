@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.envrc
+
+# macOS
+.DS_Store
+
+# 项目大文件 / 可重建产物（备份到 NAS，不进 git）
+data/
+output/
+*.db
+*.sqlite
+
+# 测试产物
+tests/_artifacts/
+
+# Claude Code 个人本地配置（含权限覆盖，不进仓库）
+.claude/settings.local.json
+
+# 打包产物
+dist/
+*.skill
